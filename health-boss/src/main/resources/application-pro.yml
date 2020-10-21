@@ -1,0 +1,42 @@
+info:
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"
+    spring-boot-version: "@project.parent.version@"
+
+server:
+  port: 9029
+
+spring:
+  datasource:
+    url: jdbc:mysql://172.26.129.16:4000/pigeon?useSSL=false&serverTimezone=Asia/Shanghai
+    username: yn_usr
+    password: verfj&8936
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 100
+      auto-commit: true
+      pool-name: HikaraiCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  redis:
+    host: 172.26.129.10
+    port: 6379
+    password: 594ft#SXRuNG2*lQ
+    timeout: 2000ms
+    database: 3
+
+
+mybatis:
+  mapper-locations: classpath*:/mybatis/mapper/**/*.xml
+  config-location: classpath:/mybatis/mybatis-config.xml
+
+#logging:
+#  level: debug
+#discovery:
+#  server-addr: http://172.26.130.8:8848
+#  namespace: seal
+#  group: pigeon #如果本地使用，需替换成自己的group，避免调用到其他环境服务
