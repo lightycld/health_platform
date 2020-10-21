@@ -15,7 +15,7 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.time.Duration;
 
 /**
- * @author liunan13
+ * @author yangwei
  * @date 2019/3/20
  * @description
  */

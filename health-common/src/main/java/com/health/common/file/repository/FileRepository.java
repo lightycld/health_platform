@@ -1,7 +1,9 @@
 package com.health.common.file.repository;
 
-import com.health.common.file.domain.File;
+import com.health.common.file.domain.MiniFile;
 import org.bson.types.ObjectId;
+
+import java.util.List;
 
 /**
  * Create By yangwei
@@ -10,7 +12,11 @@ import org.bson.types.ObjectId;
  */
 public interface FileRepository {
 
-    ObjectId save(File file);
+    MiniFile save(MiniFile file);
 
-    ObjectId get(ObjectId id);
+    MiniFile get(ObjectId id);
+
+    List<MiniFile> saveBatch(List<MiniFile> files);
+
+    List<MiniFile> listByIds(List<ObjectId> ids);
 }

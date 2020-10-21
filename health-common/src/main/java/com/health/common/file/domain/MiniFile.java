@@ -1,5 +1,7 @@
 package com.health.common.file.domain;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.health.common.config.serialize.ObjectIdJsonSerializer;
 import lombok.Data;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
@@ -12,10 +14,11 @@ import org.springframework.data.mongodb.core.mapping.Field;
  */
 
 @Data
-public class File {
+public class MiniFile {
 
     @Id
     @Field("_id")
+    @JsonSerialize(using = ObjectIdJsonSerializer.class)
     private ObjectId id;
 
     @Field("create_time")
@@ -30,7 +33,17 @@ public class File {
     @Field("data")
     byte[] data;
 
-    enum FileType{
+    @Field("size")
+    private Integer size;
+
+    public void setData(byte[] data) {
+        this.data = data;
+        if(data != null) {
+            this.size = data.length;
+        }
+    }
+
+    public enum FileType {
 
         PDF,
 
