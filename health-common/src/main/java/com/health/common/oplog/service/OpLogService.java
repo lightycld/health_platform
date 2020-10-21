@@ -1,4 +1,4 @@
-package com.health.wechat.oplog.service;
+package com.health.common.oplog.service;
 
 /**
  * Create By yangwei

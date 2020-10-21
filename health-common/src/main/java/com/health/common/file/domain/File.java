@@ -1,4 +1,4 @@
-package com.health.wechat.file.domain;
+package com.health.common.file.domain;
 
 import lombok.Data;
 import org.bson.types.ObjectId;

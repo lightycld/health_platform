@@ -1,4 +1,4 @@
-package com.health.wechat.order.service;
+package com.health.common.order.service;
 
 /**
  * Create By yangwei
