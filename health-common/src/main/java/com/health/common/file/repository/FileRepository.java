@@ -1,6 +1,6 @@
 package com.health.common.file.repository;
 
-import com.health.wechat.file.domain.File;
+import com.health.common.file.domain.File;
 import org.bson.types.ObjectId;
 
 /**

@@ -6,7 +6,7 @@ info:
     spring-boot-version: "@project.parent.version@"
 
 server:
-  port: 9001
+  port: 9010
 
 spring:
   datasource:
